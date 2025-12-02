@@ -1,0 +1,7 @@
+{
+  "posts": [
+    { "id": 1, "title": "Hello Angular", "content": "Demo content" },
+    { "id": 2, "title": "JSON Server", "content": "Works great!" }
+  ],
+  "users": [{ "id": 1, "name": "John Doe" }]
+}
