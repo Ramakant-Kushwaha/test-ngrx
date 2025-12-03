@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { fetchAllPost, showAll } from './post-action';
+import { fetchAllPost, postLoaded, showAll } from './post-action';
 import { initialState } from './post-state';
 
 export const postReducer = createReducer(
@@ -7,9 +7,7 @@ export const postReducer = createReducer(
   on(showAll, (state, {}) => {
     return { ...state };
   }),
-  on(fetchAllPost, (state, { data }) => {
-    return {
-      ...data,
-    };
+  on(postLoaded, (state, { data }) => {
+    return [...data];
   })
 );

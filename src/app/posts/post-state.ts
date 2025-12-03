@@ -1,13 +1,13 @@
 export interface Post {
   id: number;
   title: string;
-  context: string;
+  content: string;
 }
 
 export const initialState: Post[] = [
   {
     id: 1,
     title: '11',
-    context: '111',
+    content: '111',
   },
 ];
