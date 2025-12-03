@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CounterModule } from './counter/counter.module';
 import { HomeModule } from './home-component/home.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [AppComponent, NavBarComponent],
@@ -21,7 +22,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25 }),
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
