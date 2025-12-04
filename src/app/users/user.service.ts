@@ -9,4 +9,10 @@ export class UserService {
   public getAllUser(): Observable<any> {
     return this.http.get('http://localhost:3000/users').pipe(map((res) => res));
   }
+
+  public addNewUser(payload: any): Observable<any> {
+    return this.http
+      .post('http://localhost:3000/users', payload)
+      .pipe(map((res) => res));
+  }
 }

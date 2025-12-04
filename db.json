@@ -1,12 +1,36 @@
 {
   "posts": [
-    { "id": 1, "title": "Hello Angular", "content": "Demo content" },
-    { "id": 2, "title": "JSON Server", "content": "Works great!" }
+    {
+      "id": 1,
+      "title": "Hello Angular",
+      "content": "Demo content"
+    },
+    {
+      "id": 2,
+      "title": "JSON Server",
+      "content": "Works great!"
+    }
   ],
   "users": [
-    { "id": 1, "name": "John Doe" },
-    { "id": 2, "name": "John Doe 1" },
-    { "id": 3, "name": "John Doe 2" },
-    { "id": 4, "name": "John Doe 3" }
+    {
+      "id": 1,
+      "name": "John Doe",
+      "description": "Primary profile for John Doe, main account holder."
+    },
+    {
+      "id": 2,
+      "name": "John Doe 1",
+      "description": "Secondary profile linked to the main John Doe account."
+    },
+    {
+      "id": 3,
+      "name": "John Doe 2",
+      "description": "Backup user profile created for testing purposes."
+    },
+    {
+      "id": 4,
+      "name": "John Doe 3",
+      "description": "Temporary account used for administrative tasks."
+    }
   ]
 }
