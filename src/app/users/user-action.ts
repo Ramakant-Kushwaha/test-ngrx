@@ -1,15 +1,15 @@
 import { createAction, props } from '@ngrx/store';
-import { IUser } from './user-state';
+import { User } from './user-state';
 
 const prefix = '[users]';
 
 export const getAllUsers = createAction(prefix + 'get_all_users');
 
-export const startFetch = createAction(prefix + '');
+export const startFetch = createAction(prefix + 'Start Fetch');
 
 export const dataLoaded = createAction(
   prefix + 'Data Loaded',
-  props<{ data: IUser[] }>()
+  props<{ users: User[] }>()
 );
 
 export const addNewUser = createAction(

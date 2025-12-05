@@ -12,7 +12,7 @@ export class UserEffects {
     this.action$.pipe(
       ofType(startFetch),
       switchMap(() =>
-        this.us.getAllUser().pipe(map((res: any) => dataLoaded({ data: res })))
+        this.us.getAllUser().pipe(map((res: any) => dataLoaded({ users: res })))
       )
     )
   );

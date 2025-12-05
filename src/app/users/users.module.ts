@@ -7,7 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { UserEffects } from './user-effects';
 import { userReducer } from './user-reducer';
-import { USER_STATE } from './user-selector';
+import { USER_STATE_KEY } from './user-selector';
 import { UserService } from './user.service';
 import { UsersComponent } from './users.component';
 
@@ -23,7 +23,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    StoreModule.forFeature(USER_STATE, userReducer),
+    StoreModule.forFeature(USER_STATE_KEY, userReducer),
     EffectsModule.forFeature([UserEffects]),
     MatTableModule,
     HttpClientModule,

@@ -1,10 +1,6 @@
-export interface IUser {
-  id: number;
-  name: string;
-  description: string;
+export interface UserState {
+  users: User[];
 }
-
-export const initialState: IUser[] = [];
 
 export class User {
   public id!: number;
@@ -13,3 +9,7 @@ export class User {
 
   constructor() {}
 }
+
+export const initialState: UserState = {
+  users: [],
+};

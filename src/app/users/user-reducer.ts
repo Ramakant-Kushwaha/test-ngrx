@@ -4,10 +4,15 @@ import { initialState } from './user-state';
 
 export const userReducer = createReducer(
   initialState,
+
   on(getAllUsers, (state, {}) => {
-    return [...state];
+    return { ...state };
   }),
-  on(dataLoaded, (state, { data }) => {
-    return [...data];
+
+  on(dataLoaded, (state, { users }) => {
+    return {
+      state,
+      users,
+    };
   })
 );
