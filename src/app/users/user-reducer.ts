@@ -10,9 +10,6 @@ export const userReducer = createReducer(
   }),
 
   on(dataLoaded, (state, { users }) => {
-    return {
-      state,
-      users,
-    };
+    return [...users];
   })
 );

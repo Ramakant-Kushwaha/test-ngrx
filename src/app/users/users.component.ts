@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
-import { startFetch } from './user-action';
+import { addNewUser, startFetch } from './user-action';
 import { getAllUsers } from './user-selector';
 import { User } from './user-state';
 
@@ -43,5 +43,15 @@ export class UsersComponent {
 
       this.user$.subscribe((res) => console.log(res));
     }, 1000);
+
+    setTimeout(() => {
+      this.store.dispatch(
+        addNewUser({
+          id: 10,
+          name: 'Ankit',
+          description: 'Ankit',
+        })
+      );
+    }, 3000);
   }
 }

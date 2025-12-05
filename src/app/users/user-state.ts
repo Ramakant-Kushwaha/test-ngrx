@@ -10,6 +10,4 @@ export class User {
   constructor() {}
 }
 
-export const initialState: UserState = {
-  users: [],
-};
+export const initialState: User[] = [];
